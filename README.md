@@ -67,3 +67,19 @@ Router(config)#ntp server 192.168.1.10
 Router(config)#exit
 ```
 
+Tant que la synchronisation n’est pas réalisée, le client est vu en strate 16.
+```
+Router#sh ntp status
+Clock is unsynchronized, stratum 16, no reference clock
+nominal freq is 1000.0003 Hz, actual freq is 1000.0003 Hz, precision is 2**17
+ntp uptime is 5400 (1/100 of seconds), resolution is 1000
+reference time is 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1900)
+clock offset is 0.0000 msec, root delay is 0.00 msec
+root dispersion is 0.80 msec, peer dispersion is 0.00 msec
+loopfilter state is 'NSET' (Never set), drift is 0.000000000 s/s
+system poll interval is 8, never updated.
+```
+
+Après un certain temps, et si le client est correctement configuré, on apprend que l’horloge est synchronisée et que le périphérique est situé dans la strate 3.<br>
+On y apprend différentes informations sur l’horloge de référence et ses délais.
+
