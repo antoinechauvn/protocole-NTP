@@ -18,7 +18,7 @@ L’heure et la date sont donc diffusées de manière verticale à travers les n
 
 0. Au sommet de cette structure, vous trouverez les horloges de référence de temps. Pilotées par radio ou par satellites, ces dernières sont des dérivés des horloges atomiques.
 1. En dessous, les serveurs NTP de premier niveau se synchronisent sur les horloges de référence (horloges atomiques).<br>À ce jour, `230 serveurs de niveau 1` sont recensés à travers la planète.
-2. Les serveurs NTP secondaires vont alors obtenir l’heure et la date des serveurs du précédent niveau en mode client/serveur. D’autre part, ces mêmes serveurs vont échanger, en mode symétrique, avec d’autres serveurs du même niveau pour s’assurer du bon horodatage (même horaire de référence).
+2. Les serveurs NTP secondaires vont alors obtenir l’heure et la date des serveurs du précédent niveau en mode client/serveur.<br>D’autre part, ces mêmes serveurs vont échanger, en mode symétrique, avec d’autres serveurs du même niveau pour s’assurer du bon horodatage (même horaire de référence).
 3. Les serveurs de niveau inférieur, ceux du 3ème niveau dans ce cas, utilisent la même méthode de communication à savoir :
   * Un mode client / serveur avec les serveurs NTP de rang supérieur,
   * Et un mode symétrique avec les serveurs NTP de même rang.
