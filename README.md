@@ -25,16 +25,21 @@ L’heure et la date sont donc diffusées de manière verticale à travers les n
 * Puis, les clients terminaux (serveurs et ordinateurs) vont alors se synchroniser en mode client/serveur ou en multicast en vue de recevoir un horodatage exact. 
 
 *Note: Toutefois, la présence de ces clients sur le réseau n’est autorisée qu’à partir du troisième niveau.*
+
 ### Modes NTP
-Mode symétrique actif
+#### Mode symétrique actif
 Un serveur fonctionnant dans ce mode envoie périodiquement des messages, sans se soucier de l’état de ses voisins (joignables, serveurs primaires ou secondaires, clients). Il indique ainsi sa « volonté » de synchroniser d’autres serveurs et d’être synchroniser par eux.
-Mode symétrique passif
-Ce type d’association est généralement créée lors de l’arrivée sur le serveur d’un message d’un autre serveur (en mode symétrique actif). Le serveur annonce son intention de synchroniser et d’être synchronisé. Seulement il ne le fait qu’après avoir été sollicité par un autre serveur. 
-Mode client
-La machine envoie des messages régulièrement, sans se préoccuper de l’état de ses voisins. La station (typiquement, elle appartient à un réseau LAN) indique ainsi sa « volonté » d’être synchronisée.
-Mode serveur
+
+#### Mode symétrique passif
+Ce type d’association est généralement créée lors de l’arrivée sur le serveur d’un message d’un autre serveur (en mode symétrique actif). Le serveur annonce son intention de synchroniser et d’être synchronisé. Seulement il ne le fait qu’après avoir été sollicité par un autre serveur.
+
+#### Mode client
+La machine envoie des messages régulièrement, sans se préoccuper de l’état de ses voisins. Elle indique ainsi sa « volonté » d’être synchronisée.
+
+#### Mode serveur
 L’association de ce mode est créée lors de la réception d’une requête (un message) d’une station en mode client.
-Mode broadcast
+
+#### Mode broadcast
 Destiné aux réseaux locaux, il se limite à une diffusion d’informations horaires pour des clients pouvant être soit passifs, soit découvrant ainsi les serveurs avec lesquels ils vont se synchroniser.
 
 ## Avantages et utilisations de NTP
