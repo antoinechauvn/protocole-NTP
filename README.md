@@ -25,7 +25,7 @@ L’heure et la date sont donc diffusées de manière verticale à travers les n
 
 *Note: Toutefois, la présence de ces clients sur le réseau n’est autorisée qu’à partir du troisième niveau.*
 
-### Modes NTP
+## Modes NTP
 #### Mode symétrique actif
 Un serveur fonctionnant dans ce mode envoie périodiquement des messages, sans se soucier de l’état de ses voisins (joignables, serveurs primaires ou secondaires, clients). Il indique ainsi sa « volonté » de synchroniser d’autres serveurs et d’être synchroniser par eux.
 
