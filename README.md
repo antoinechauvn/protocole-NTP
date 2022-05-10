@@ -83,3 +83,11 @@ system poll interval is 8, never updated.
 Après un certain temps, et si le client est correctement configuré, on apprend que l’horloge est synchronisée et que le périphérique est situé dans la strate 3.<br>
 On y apprend différentes informations sur l’horloge de référence et ses délais.
 
+### Afficher les périphériques associés pour le NTP
+```
+Router#show ntp associations
+
+  address         ref clock       st   when   poll reach  delay  offset   disp
+*~188.165.236.162 131.188.3.220    2    116    128   377  5.591 -45.321  5.139
+ * sys.peer, # selected, + candidate, - outlyer, x falseticker, ~ configured
+ ```
