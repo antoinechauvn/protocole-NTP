@@ -24,7 +24,7 @@ L’heure et la date sont donc diffusées de manière verticale à travers les n
   * Et un mode symétrique avec les serveurs NTP de même rang.
 * Puis, les clients terminaux (serveurs et ordinateurs) vont alors se synchroniser en mode client/serveur ou en multicast en vue de recevoir un horodatage exact. 
 
-*Note: Toutefois, la présence de ces clients sur le réseau n’est autorisée qu’à partir du troisième niveau.*
+*Note: Toutefois, la présence de clients n’est autorisée qu’à partir du troisième niveau.*
 
 ## Modes NTP
 #### Mode symétrique actif
