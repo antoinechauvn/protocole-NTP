@@ -14,12 +14,11 @@ Le NTP utilise le protocole de transport UDP et le port 123.<br>
 Le Network Time Protocol repose sur une architecture hiérarchique en réseau, répartie en plusieurs niveaux (ou strates).<br>
 L’heure et la date sont donc diffusées de manière verticale à travers les niveaux, du niveau 1 jusqu’au niveau 15. Dans la majorité des cas, cela ne dépasse pas le 5ᵉ niveau.
 
-![image](https://user-images.githubusercontent.com/83721477/167574127-55cc88b5-5358-41cf-a691-e037f2adb257.png)
+![image](https://user-images.githubusercontent.com/83721477/167577346-af47c81a-d2d0-491b-b218-e48ee0ff7a32.png)
 
-* Au sommet de cette structure, vous trouverez les horloges de référence de temps. Pilotées par radio ou par satellites, ces dernières sont des dérivés des horloges atomiques.
-* En dessous, les serveurs NTP de premier niveau se synchronisent sur les horloges de référence (horloges atomiques).<br>À ce jour, `230 serveurs de niveau 1` sont recensés à travers la planète.
-* Par la suite, les serveurs NTP secondaires vont alors obtenir l’heure et la date des serveurs du précédent niveau en mode client/serveur. D’autre part, ces mêmes serveurs vont échanger, en mode symétrique, avec d’autres serveurs du même niveau pour s’assurer du bon horodatage (même horaire de référence).
-* Les serveurs de niveau inférieur, ceux du 3ème niveau dans ce cas, utilisent la même méthode de communication à savoir :
+1. Au sommet de cette structure, vous trouverez les horloges de référence de temps. Pilotées par radio ou par satellites, ces dernières sont des dérivés des horloges atomiques.
+2. En dessous, les serveurs NTP de premier niveau se synchronisent sur les horloges de référence (horloges atomiques).<br>À ce jour, `230 serveurs de niveau 1` sont recensés à travers la planète.<br>Par la suite, les serveurs NTP secondaires vont alors obtenir l’heure et la date des serveurs du précédent niveau en mode client/serveur. D’autre part, ces mêmes serveurs vont échanger, en mode symétrique, avec d’autres serveurs du même niveau pour s’assurer du bon horodatage (même horaire de référence).
+3. Les serveurs de niveau inférieur, ceux du 3ème niveau dans ce cas, utilisent la même méthode de communication à savoir :
   * Un mode client / serveur avec les serveurs NTP de rang supérieur,
   * Et un mode symétrique avec les serveurs NTP de même rang.
 * Puis, les clients terminaux (serveurs et ordinateurs) vont alors se synchroniser en mode client/serveur ou en multicast en vue de recevoir un horodatage exact. 
