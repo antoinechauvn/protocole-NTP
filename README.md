@@ -46,3 +46,24 @@ Destiné aux réseaux locaux, il se limite à une diffusion d’informations hor
 * Donner la meilleure précision possible compte tenu des conditions matérielles
 * Résister à une multitude de pannes (y compris les bugs d’implémentation)
 * Réaliser l’authentification cryptographique basée sur des infrastructures de clefs symétriques et de clefs publiques
+
+## Configuration Cisco NTP
+Par défaut, NTP est désactivé sur le matériel Cisco.
+```
+Router#show ntp status
+%NTP is not enabled.
+```
+
+#### Définir l'horloge locale
+```
+Router#clock set [hh:mm:ss] [month] [day] [year]
+```
+
+#### Définir un serveur NTP
+```
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#ntp server 192.168.1.10
+Router(config)#exit
+```
+
